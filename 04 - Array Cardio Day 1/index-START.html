@@ -54,8 +54,12 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-
+    const gap = inventors.map(inventor => inventor.passed - inventor.year);
+    console.log(`Gap: ${gap}`)
+    const reduced = gap.reduce((acc, gap) => {return acc + gap}, 0);
+    console.log(`They lived: ${reduced} years together`);
     // 5. Sort the inventors by years lived
+    
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
